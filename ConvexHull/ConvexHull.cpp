@@ -22,7 +22,7 @@ std::vector<Point> ConvexHull::Incremental(std::vector<Point> pointSet) {
 
     const int n = pointSet.size();
     for(int i = 3; i < n - 1; ++i) {
-        Point& point = pointSet[i];
+        const Point& point = pointSet[i];
         Segment bot = Segment(hull[i - 3], hull[i - 2]);
         Segment top = Segment(hull[i - 2], hull[i - 1]);
 
